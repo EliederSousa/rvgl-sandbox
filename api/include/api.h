@@ -7,6 +7,8 @@
 #define EXPORT
 #endif
 
+#include "output.h"
+
 namespace API {
     EXPORT void init();
     EXPORT void loop();
