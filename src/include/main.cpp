@@ -1,6 +1,6 @@
 #include <Windows.h>
 #include "../api/include/api.h"
-#include "script.cpp"
+#include "../script.h"
 
 // What about to test if we can put this code (with MainThread and DLLMain) into api.cpp, and **hide** it from user?
 // So, it will be only one file (main.cpp), with init() and loop().
