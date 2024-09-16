@@ -15,6 +15,10 @@ OUTPUT_NAME	= mod.asi
 # File to record the timestamp of last compilation
 TIMESTAMP_FILE 	= lastbuild.timestamp
 
+# The folder to copy the resulting file.
+RVGL_FOLDER 	= "C:\Users\MariEli\Downloads\RVGL"
+
+
 all: $(SOURCES_PATH)/$(SOURCES_NAME) $(TIMESTAMP_FILE)
 	cls && $(COMPILER) $(SOURCES_PATH)/$(SOURCES_NAME) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OUTPUT_PATH)/$(OUTPUT_NAME)
 
