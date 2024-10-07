@@ -16,7 +16,7 @@ OUTPUT_NAME	= mod.asi
 TIMESTAMP_FILE 	= lastbuild.timestamp
 
 # The folder to copy the resulting file.
-RVGL_FOLDER 	= "C:\Users\MariEli\Downloads\RVGL"
+RVGL_FOLDER 	= "C:\Users\Elieder\Documents\RVGL"
 
 
 all: $(SOURCES_PATH)/$(SOURCES_NAME) $(TIMESTAMP_FILE)
@@ -30,4 +30,5 @@ clear:
 	@if exist "$(OUTPUT_PATH)" del /Q "$(OUTPUT_PATH)\$(OUTPUT_NAME)" "$(OUTPUT_PATH)\$(TIMESTAMP_FILE)"
 
 copy:
-	@cls && if exist "$(OUTPUT_PATH)/$(OUTPUT_NAME)" xcopy /Y "$(OUTPUT_PATH)\$(OUTPUT_NAME)" "$(RVGL_FOLDER)\$(OUTPUT_NAME)"
+	@cls 
+	@if exist "$(OUTPUT_PATH)/$(OUTPUT_NAME)" xcopy /F /I /Y "$(OUTPUT_PATH)/$(OUTPUT_NAME)" "$(RVGL_FOLDER)\$(OUTPUT_NAME)"

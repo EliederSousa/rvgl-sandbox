@@ -7,29 +7,38 @@
 #define EXPORT
 #endif
 
-#include <string.h>
+#include <string>
 
 namespace IniLoader {
-    /**
-        @brief Loads the .ini file.
-        @param The URL of the .ini file to be loaded.
-    */
-    EXPORT void loadINIFile( char* fileUrlParam );
+        /**
+            @brief Loads the .ini file.
+            @param The URL of the .ini file to be loaded.
+        */
+        EXPORT void loadINIFile(const char* fileUrl);
 
-    /**
-        @brief Get the value of some variable in .ini file and write to an specified variable.
-        @param the section in .ini file. Ex: "default".
-        @param the name of the variable to be readed.
-        @param the variable witch will receive the value. You need to declare the variable with the same type of the value you expect to be returned. Ex: if destinationVar was declared as int, the value written on it will be an int as well.
-    */
-    EXPORT void getValue( const char* section, const char* variableName, auto& destinationVar );
+        /**
+            @brief Get the value of some variable in .ini file and write to a specified variable.
+            @param the section in .ini file. Ex: "default".
+            @param the name of the variable to be read.
+            @param the variable which will receive the value. You need to declare the variable with the same type of the value you expect to be returned.
+        */
 
-    /**
-        @brief Get the value of some variable in .ini file and returns it.
-        @param the section in .ini file. Ex: "default".
-        @param the name of the variable to be readed.
-    */
-    EXPORT template <typename T> T getValue( const char* section, const char* variableName );
-}
+        EXPORT int getIntValue(const char* section, const char* variableName);        
+
+        EXPORT float getFloatValue(const char* section, const char* variableName);
+
+        EXPORT bool getBoolValue(const char* section, const char* variableName);
+
+        EXPORT std::string getStringValue(const char* section, const char* variableName);
+
+        /**
+            @brief Get the value of some variable in .ini file and returns it.
+            @param section the section in .ini file. Ex: "default".
+            @param variableName the name of the variable to be read.
+        */
+        //template <typename T>
+        //T getValue(const char* section, const char* variableName);
+    
+};
 
 #endif

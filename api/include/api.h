@@ -7,7 +7,13 @@
 #define EXPORT
 #endif
 
+/**
+ * Estes includes facilitam a importação das bibliotecas no projeto público. Lá só é necessário importar este arquivo (api.h), para
+ * que todos os outros includes sejam adicionados automaticamente.
+ */
 #include "output.h"
+#include "iniloader.h"
+#include "utils.h"
 
 namespace API {
     EXPORT void init();
