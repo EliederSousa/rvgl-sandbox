@@ -11,9 +11,11 @@
 
 namespace IniLoader {
         /**
-            @brief Loads the .ini file.
-            @param The URL of the .ini file to be loaded.
-        */
+         * @brief Loads an INI file into memory.
+         * @param fileUrlParam The name of ini file to be loaded.
+         * @return void
+         * @example IniLoader::loadINIFile("myfile.ini");
+         */
         EXPORT void loadINIFile(const char* fileUrl);
 
         /**

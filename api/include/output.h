@@ -13,6 +13,7 @@ namespace Output {
     EXPORT void initConsole();
     EXPORT void messageBox( const std::string& title, const std::string& msg );
     EXPORT void print( std::string msg );
+    EXPORT void println( std::string msg );
 }
 
 #endif
