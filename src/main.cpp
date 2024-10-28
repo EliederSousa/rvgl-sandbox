@@ -15,7 +15,6 @@ void sandboxLoop() {
 }
 
 DWORD WINAPI MainThread( LPVOID param ) {
-    Utils::sleep(1000);
     sandboxInit();
     while ( true ) {
         sandboxLoop();
